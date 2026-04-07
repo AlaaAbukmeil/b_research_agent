@@ -2,7 +2,7 @@ import json
 import re
 
 from src.dify_client import DifyClient
-from memory.token_counter import TokenCounter
+from ..memory.token_counter import TokenCounter
 
 
 class QueryDecomposer:
@@ -29,6 +29,8 @@ class QueryDecomposer:
         try:
             outputs = self.client.run_workflow({"query": query})
             result_text = outputs.get("result", outputs.get("text", ""))
+            if not isinstance(result_text, str):
+                result_text = json.dumps(result_text, ensure_ascii=False)
             est_output = self.counter.count(result_text)
 
             parsed = self._parse(result_text)

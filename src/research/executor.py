@@ -1,6 +1,6 @@
 from src.dify_client import DifyClient
-from memory.manager import MemoryManager
-from memory.token_counter import TokenCounter
+from ..memory.manager import MemoryManager
+from ..memory.token_counter import TokenCounter
 
 
 class ResearchExecutor:
@@ -56,6 +56,8 @@ class ResearchExecutor:
 
             finding = outputs.get("result", outputs.get("text",
                                   "No result returned"))
+            if not isinstance(finding, str):
+                finding = str(finding)
             est_output = self.counter.count(finding)
 
             self.memory.record_cost(session_id, est_input, est_output)

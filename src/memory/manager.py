@@ -2,8 +2,8 @@ import json
 import re
 from collections import Counter
 
-from memory.token_counter import TokenCounter
-from memory.store import MemoryStore
+from ..memory.token_counter import TokenCounter
+from ..memory.store import MemoryStore
 
 
 class MemoryManager:

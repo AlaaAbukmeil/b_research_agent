@@ -182,3 +182,7 @@ python main.py --mode sessions
 Budget ceiling ($0.10) allows ~70 sessions, or a single session with up to ~350 sub-questions.
 
 ---
+
+## Demo Output
+
+A full terminal session transcript is available in [`terminal_demo_output.txt`](terminal_demo_output.txt).

@@ -1,0 +1,107 @@
+(venv) PS C:\Users\alaa\Desktop\b_research_agent> python main.py
+
+================================================================
+  G3: Deep Research Agent
+  Hierarchical Memory · Token-Budgeted · Cost-Capped
+================================================================
+
+Commands:
+  research <query>   — Start a new research session
+  sessions           — List past sessions
+  view <session_id>  — View a past session in detail
+  quit               — Exit
+
+→ research How do transformer and SSM architectures compare for long-context NLP, and which is more cost-efficient?
+
+================================================================
+  RESEARCH SESSION: 0863b1db
+  Query: How do transformer and SSM architectures compare for long-context NLP, and which is more cost-efficient?
+  Constraints: ≤2000 tok/call, ≤$0.1/session
+================================================================
+
+📋 Stage 1: Decomposing query…
+  Strategy: Analyze architectural features, evaluate computational costs, review performance benchmarks, and synthesize findings to determine cost-efficiency.
+  Sub-questions (5):
+    1. What are the key architectural differences between transformer and SSM models in handling long-context NLP tasks?
+    2. How do transformer models perform in terms of computational cost and efficiency for long-context processing?
+    3. How do SSM models perform in terms of computational cost and efficiency for long-context processing?
+    4. What empirical evidence or benchmarks compare the performance of transformers and SSMs on long-context NLP datasets?
+    5. Based on cost-efficiency analysis, which architecture is more suitable for long-context NLP applications and why?
+
+🔍 Stage 2: Researching sub-questions…
+
+  [1/5] What are the key architectural differences between transformer and SSM models in…
+       Finding: {   "strategy": "Compare transformer and SSM architectures by focusing on their core mechanisms for handling long contex…
+       Memory: 1/5 episodic, 0 compressed, 138 tok stored
+       Context used: 0/1400 tok budget
+       Cost remaining: $0.0998
+
+  [2/5] How do transformer models perform in terms of computational cost and efficiency …
+       Finding: {   "strategy": "Focus on analyzing the computational cost and efficiency of transformer models specifically for long-co…
+       Memory: 2/5 episodic, 0 compressed, 272 tok stored
+       Context used: 165/1400 tok budget
+       Cost remaining: $0.0997
+
+  [3/5] How do SSM models perform in terms of computational cost and efficiency for long…
+       Finding: {   "strategy": "Focus on analyzing the computational cost and efficiency of SSM models specifically for long-context pr…
+       Memory: 3/5 episodic, 0 compressed, 429 tok stored
+       Context used: 323/1400 tok budget
+       Cost remaining: $0.0995
+
+  [4/5] What empirical evidence or benchmarks compare the performance of transformers an…
+       Finding: {   "strategy": "Summarize empirical evidence from benchmarks comparing transformers and SSMs on long-context NLP datase…
+       Memory: 4/5 episodic, 0 compressed, 601 tok stored
+       Context used: 505/1400 tok budget
+       Cost remaining: $0.0994
+
+  [5/5] Based on cost-efficiency analysis, which architecture is more suitable for long-…
+       Finding: {   "strategy": "Directly compare transformers and SSMs on cost-efficiency for long-context NLP, referencing memory cont…
+       Memory: 5/5 episodic, 0 compressed, 750 tok stored
+       Context used: 705/1400 tok budget
+       Cost remaining: $0.0992
+
+🧠 Stage 3: Synthesizing final answer…
+
+================================================================
+  RESEARCH COMPLETE — Session 0863b1db
+================================================================
+
+📊 Memory Utilisation:
+   Episodic buffer:    5/5 entries (750 tok)
+   Compressed memory:  0 entries (0 tok)
+   Total stored:       750 tok
+   Synthesis context:  852 tok used
+   Per-call budget:    2000 tok max
+
+💰 Cost:
+   Input tokens:  5,475
+   Output tokens: 1,035
+   Total cost:    $0.001056
+   Budget limit:  $0.1
+
+📝 Answer:
+────────────────────────────────────────────────────────────────
+{
+  "strategy": "Synthesize findings by comparing transformer and SSM architectures on long-context NLP, focusing on architectural differences, computational costs, empirical benchmarks, and cost-efficiency to determine suitability.",
+  "sub_questions": [
+    "What are the key architectural differences between transformers and SSMs in handling long contexts, and how do these affect scaling and efficiency?",    
+    "How do computational costs and memory usage compare between transformers and SSMs for long-context processing?",
+    "What empirical evidence from benchmarks shows the performance and efficiency trade-offs between transformers and SSMs on long-context NLP tasks?",       
+    "Based on cost-efficiency analysis, which architecture is more suitable for long-context NLP applications, and why?"
+  ]
+}
+────────────────────────────────────────────────────────────────
+
+→ sessions
+
+================================================================
+  RESEARCH SESSIONS
+================================================================
+
+  ✅ 0863b1db  $0.0011  2026-04-07T11:38:38
+     How do transformer and SSM architectures compare for long-context NLP, and which
+
+  ✅ 8d8eb439  $0.0002  2026-04-07T11:34:10
+     How do transformer and SSM architectures compare for long-context NLP, and which
+
+→

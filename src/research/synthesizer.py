@@ -1,6 +1,6 @@
 from src.dify_client import DifyClient
-from memory.manager import MemoryManager
-from memory.token_counter import TokenCounter
+from ..memory.manager import MemoryManager
+from ..memory.token_counter import TokenCounter
 
 
 class Synthesizer:
@@ -37,6 +37,8 @@ class Synthesizer:
             })
             answer = outputs.get("result", outputs.get("text",
                                  "No synthesis result"))
+            if not isinstance(answer, str):
+                answer = str(answer)
             est_output = self.counter.count(answer)
 
             self.memory.record_cost(session_id, est_input, est_output)

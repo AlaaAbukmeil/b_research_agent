@@ -1,11 +1,11 @@
 import uuid
 
-from memory.store import MemoryStore
-from memory.manager import MemoryManager
-from dify_client import DifyClient
-from research.decomposer import QueryDecomposer
-from research.executor import ResearchExecutor
-from research.synthesizer import Synthesizer
+from ..memory.store import MemoryStore
+from ..memory.manager import MemoryManager
+from ..dify_client import DifyClient
+from ..research.decomposer import QueryDecomposer
+from ..research.executor import ResearchExecutor
+from ..research.synthesizer import Synthesizer
 
 
 class ResearchAgent:
