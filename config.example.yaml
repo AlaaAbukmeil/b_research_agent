@@ -1,0 +1,26 @@
+dify:
+  base_url: "https://api.dify.ai/v1"
+  decomposer_api_key: "app-your-decomposer-workflow-key"
+  researcher_api_key: "app-your-researcher-workflow-key"
+  synthesizer_api_key: "app-your-synthesizer-workflow-key"
+
+constraints:
+  # Hard ceiling: no single LLM call sends more than this many tokens
+  max_context_tokens_per_call: 2000
+  # Hard ceiling: entire session (all LLM calls) must cost less than this
+  max_cost_per_session_usd: 0.10
+  # Maximum sub-questions generated from decomposition
+  max_sub_questions: 5
+  # Episodic buffer: how many raw findings to keep before compressing
+  episodic_buffer_capacity: 5
+  # Max tokens for a single episodic entry (raw finding)
+  episodic_entry_max_tokens: 200
+  # Max tokens for a single compressed memory entry
+  compressed_entry_max_tokens: 100
+  # How many compressed memories to retrieve per query (ranked by relevance)
+  memory_retrieval_top_k: 8
+
+# DeepSeek Chat pricing (adjust for your model)
+token_costs:
+  input_per_million: 0.14
+  output_per_million: 0.28
